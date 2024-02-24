@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import dio.myfirstwebapi.model.Usuario;
 
 @Repository
-public class UserRepository {
+public class UsuarioRepository {
 
     public void save(Usuario usuario) {
         if (usuario.getId() == null) {
