@@ -21,7 +21,7 @@ public class UsuarioRepository {
     }
 
     public void deleteById(Integer id) {
-        System.out.println(String.format("DELETE/id - Recebendo o id: $d para excluir um usuário", id));
+        System.out.println(String.format("DELETE/id - Recebendo o id: %d para excluir um usuário", id));
         System.out.println(id);
     }
 
@@ -40,7 +40,7 @@ public class UsuarioRepository {
 
     public Usuario findByUsername(String username) {
         System.out
-                .println(String.format("FIND/username - Recebendo o username: %s para logalizar um usuário", username));
+                .println(String.format("FIND/username - Recebendo o username: %s para localizar um usuário", username));
         return new Usuario(username, "senha");
     }
 }
