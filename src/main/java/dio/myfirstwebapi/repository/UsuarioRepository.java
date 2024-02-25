@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import dio.myfirstwebapi.handler.BusinessException;
+import dio.myfirstwebapi.handler.CampoObrigatorioException;
 import dio.myfirstwebapi.model.Usuario;
 
 @Repository
@@ -14,7 +14,10 @@ public class UsuarioRepository {
     public void save(Usuario usuario) {
 
         if (usuario.getLogin() == null) {
-            throw new BusinessException("O campo login é obrigatório");
+            throw new CampoObrigatorioException("login");
+        }
+        if (usuario.getPassword() == null) {
+            throw new CampoObrigatorioException("password");
         }
 
         if (usuario.getId() == null) {
